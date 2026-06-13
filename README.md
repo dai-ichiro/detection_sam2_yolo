@@ -16,7 +16,7 @@
 ### システム依存関係のインストール
 ```bash
 sudo apt update
-sudo apt install -y libgtk-3-dev libjpeg-dev libpng-dev
+sudo apt install -y libgtk-3-dev libjpeg-dev libpng-dev imagemagick
 ```
 
 ### リポジトリのクローン

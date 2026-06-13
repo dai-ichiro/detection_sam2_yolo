@@ -9,3 +9,19 @@ Python 3.12
 sudo apt install -y libgtk-3-dev libjpeg-dev libpng-dev
 ```
 
+## リポジトリのクローン
+```
+git clone https://github.com/dai-ichiro/detection_sam2_yolo
+```
+
+## モデルのダウンロード（SAM2）
+```
+cd models
+. download_models.sh
+cd ../
+```
+
+## Python環境の構築
+```
+uv sync
+```

@@ -41,5 +41,5 @@ uv run train.py
 ## 推論
 
 ```
-uv run inference.py --image sample_images/sample01.jpg --weights runs/train/exp/weights/best.pt
+uv run inference.py --image sample_images/sample01.jpg --weights runs/detect/train/weights/best.pt
 ```

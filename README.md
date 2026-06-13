@@ -48,7 +48,7 @@ uv run tools/download_sample_videos.py
 
 ### 基本的な実行
 ```bash
-uv run train.py --videos_dir videos --epochs 50
+uv run train.py
 ```
 
 ### 引数詳細

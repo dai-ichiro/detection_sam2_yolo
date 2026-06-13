@@ -26,3 +26,8 @@ cd ../
 ```
 uv sync
 ```
+
+## サンプルデータ（学習用）のダウンロード
+```
+uv run tools/download_sample_videos.py
+```

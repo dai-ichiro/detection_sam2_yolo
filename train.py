@@ -19,6 +19,7 @@ parser.add_argument('--sam2_config_dir', type=str, default='/home/hoge/sam2/mode
 parser.add_argument('--sam2_model_cfg', type=str, default='sam2.1_hiera_l', help='SAM2 model config name')
 parser.add_argument('--mode', type=str, default='both', choices=['tracking', 'yolo_train', 'both'], help='execution mode')
 args = parser.parse_args()
+args.sam2_config_dir = os.path.abspath(args.sam2_config_dir)
 
 
 def tracking():
@@ -79,7 +80,7 @@ def tracking():
     from hydra import initialize_config_dir
     import hydra
     hydra.core.global_hydra.GlobalHydra.instance().clear()
-    initialize_config_dir(config_dir=os.path.abspath(args.sam2_config_dir), version_base=None)
+    initialize_config_dir(config_dir=args.sam2_config_dir, version_base=None)
 
     predictor = build_sam2_video_predictor(args.sam2_model_cfg, args.sam2_checkpoint, device=device)
 
